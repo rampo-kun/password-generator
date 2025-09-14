@@ -21,7 +21,7 @@ function App() {
 
   useEffect(() => {
     generatePassword();
-  }, [length, allowNum, allowSpecial]);
+  }, [length, allowNum, allowSpecial, setPassword]);
 
   const passRef = useRef(null);
 
@@ -31,7 +31,7 @@ function App() {
   }, [password]);
 
   return (
-    <>
+    <div className="flex flex-col justify-center">
       <h1 className="font-bold text-5xl text-center pt-5 font-display text-[#E45A92] stroke-[#5D2F77] stroke-2">
         Password Generator
       </h1>
@@ -98,7 +98,10 @@ function App() {
           </button>
         </div>
       </div>
-    </>
+      <div className="flex justify-center ">
+        <img src="rampo.png" alt="rampo-kun" className="w-2xs" />
+      </div>
+    </div>
   );
 }
 
